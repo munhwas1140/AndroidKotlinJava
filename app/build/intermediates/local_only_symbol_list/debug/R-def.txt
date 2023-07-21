@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id bmiButton
+id button
+id button1
+id button2
+id button3
+id button4
+id button5
+id button6
+id clickCountLabel
+id numberField
+id resultLabel
+id startTimeLable
+id tallField
+id textView
+id textView2
+id weightField
+layout activity_main
+layout layout_control
+layout layout_variable
+layout layout_view_binding
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.KotlinSample
+style Theme.KotlinSample
+xml backup_rules
+xml data_extraction_rules
