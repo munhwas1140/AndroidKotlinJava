@@ -69,4 +69,42 @@ class KotlinTest {
         Assert.assertEquals("dog", animal.map["name"])
         Assert.assertEquals(21, animal.map["age"])
     }
+
+    @Test
+    fun testFruit() {
+        // 객체의 속성이 같도록 Fruit 객체 2개 생성
+        var fruit1 = Fruit("바나나", "바나나 길어")
+        var fruit2 = Fruit("바나나", "바나나 길어")
+
+        println(fruit1)
+        println(fruit2)
+
+        Assert.assertEquals(fruit1, fruit2)
+
+        Assert.assertEquals(fruit1.hashCode(), fruit2.hashCode())
+    }
+
+    @Test
+    fun testLambda1() {
+        // 함수의 파라미터로 람다식 전달
+        println(sum(1, 2))
+        // 람다식 반환값으로 비교
+        Assert.assertEquals(4, sum(1, 3))
+
+        // 함수에 람다 표현식을 바로 전달
+        Assert.assertEquals(4,{x: Int, y: Int -> x * y}(2, 2))
+
+        val exp = {x: Int, y: Int ->
+            {z: Int -> (x + y) * z}
+        }
+
+        // exp2 --> {z: Int -> (3 + 2) * z)}
+        // x, y 에 각각 3, 2를 대입하고 나온 exp2도 함수이다.
+        val exp2 = exp(3, 2)
+        // result --> (3 + 2) * 4
+        val result = exp2(4)
+        //결과 확인
+
+        Assert.assertEquals(20, result)
+    }
 }

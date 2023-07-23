@@ -27,7 +27,7 @@ public class BmiJavaActivity extends AppCompatActivity {
         bmiButton = findViewById(R.id.bmiButton);
 
 
-        findViewById(R.id.bmiButton).setOnClickListener(new View.OnClickListener() {
+        bmiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // tall의 값을 읽어온다
